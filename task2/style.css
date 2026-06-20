@@ -1,0 +1,25 @@
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    max-width: 640px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    line-height: 1.6;
+    color: #1a1a1a;
+}
+h1 { margin-bottom: 0.25rem; }
+p.sub { color: #666; margin-top: 0; }
+ul { list-style: none; padding: 0; }
+li {
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+    transition: background 0.15s;
+}
+li:hover { background: #f6f8fa; }
+li a {
+    display: block;
+    padding: 0.85rem 1rem;
+    text-decoration: none;
+    color: #0969da;
+    font-weight: 600;
+}

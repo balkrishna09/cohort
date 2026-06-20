@@ -1,6 +1,10 @@
 # Excluded: looks like it may contain HR/production data — keep out of a public repo
 workday_prod_report.xlsx
 
+# Project notes & local tooling — kept local for now
+CLAUDE.md
+.claude/
+
 # OS / editor junk
 .DS_Store
 Thumbs.db
