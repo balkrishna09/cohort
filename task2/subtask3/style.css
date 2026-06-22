@@ -1,8 +1,411 @@
+/* ---- Reset ---- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---- Page ---- */
 body {
-    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-    max-width: 720px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-    line-height: 1.6;
-    color: #1a1a1a;
+    font-family: "Inter", sans-serif;
+    background-color: #070b11;
+    color: #e7ecf2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 32px 16px 48px;
+}
+
+.canvas {
+    width: 1320px;
+    max-width: 100%;
+}
+
+/* ---- Top bar (flex, space-between) ---- */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 22px;
+}
+
+.eyebrow {
+    font-family: "Space Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8b97a6;
+    margin-bottom: 6px;
+}
+
+.big-title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 0.95;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.topbar-tags {
+    display: flex;
+    gap: 48px;
+    margin-left: auto;
+}
+
+.tag-col {
+    list-style: none;
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #8b97a6;
+}
+
+.tag-col.bracketed {
+    font-family: "Space Mono", monospace;
+    color: #aeb8c6;
+}
+
+.filters-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: inherit;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #e7ecf2;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    padding: 14px 22px;
+    cursor: pointer;
+}
+
+.filters-btn:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* ---- Grid rows (flex) ---- */
+.row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+/* Shared card media: image + unifying navy tint overlay */
+.media {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+/* navy gradient tint so the varied stock photos read as one collection */
+.media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+        rgba(12, 18, 28, 0.30) 0%,
+        rgba(12, 18, 28, 0.45) 55%,
+        rgba(10, 15, 23, 0.75) 100%);
+}
+
+/* ---- Hero card ---- */
+.hero-card {
+    position: relative;            /* positioning context for overlays */
+    flex: 1.85;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    background: #0f1620;
+}
+
+.hero-card .media {
+    flex: 1;
+    border-radius: 12px;
+}
+
+.hero-brand {
+    position: absolute;
+    top: 38%;
+    right: 34px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.hero-buy {
+    position: absolute;
+    top: 50%;
+    right: 34px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.hero-circle {
+    width: 52px;
+    height: 52px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.hero-buy-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.hero-buy-label {
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #aeb8c6;
+}
+
+.hero-buy-price {
+    font-family: "Oswald", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.hero-graffiti {
+    position: absolute;
+    left: 30px;
+    bottom: 26px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    font-style: italic;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.16);
+    text-transform: uppercase;
+}
+
+/* ---- Product card ---- */
+.pcard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #141d29 0%, #0e1620 100%);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;            /* positioning context */
+}
+
+.row-hero .pcard .media { height: 300px; }
+.row-five .pcard .media { height: 300px; }
+
+.pcard-info {
+    padding: 16px 18px 18px;
+}
+
+.pcard-name {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.pcard-sub {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #8b97a6;
+    margin: 4px 0 14px;
+}
+
+/* color swatches (flex row of dots) */
+.colors {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.swatch {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #c2cad6;
+}
+
+.dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-white  { background: #f3f5f8; }
+.dot-blue   { background: #4a7fb5; }
+.dot-silver { background: #c9d2dc; }
+.dot-black  { background: #11161e; border: 1px solid #3a4452; }
+.dot-navy   { background: #1f3450; }
+
+.dot.active {
+    outline: 1px solid #6f7d8e;
+    outline-offset: 2px;
+}
+
+.price {
+    font-family: "Oswald", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: #e7ecf2;
+}
+
+/* ---- Features bar (flex, space-between) ---- */
+.features {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    background: linear-gradient(180deg, #131c27 0%, #0d141d 100%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 26px 30px;
+    margin-bottom: 16px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+}
+
+.feature + .feature {
+    border-left: 1px solid rgba(255, 255, 255, 0.07);
+    padding-left: 26px;
+}
+
+.feat-icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    color: #cdd6e2;
+}
+
+.feat-title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+
+.feat-text {
+    font-size: 12px;
+    color: #8b97a6;
+    line-height: 1.4;
+}
+
+/* ---- Footer (flex, space-between) ---- */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(180deg, #131c27 0%, #0d141d 100%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 22px 30px;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.foot-logo {
+    width: 30px;
+    height: 30px;
+    color: #cdd6e2;
+}
+
+.copy {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #8b97a6;
+    line-height: 1.5;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-nav a {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #c2cad6;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    color: #fff;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.follow {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #8b97a6;
+}
+
+.footer-social a {
+    color: #c2cad6;
+    display: flex;
+}
+
+.footer-social a:hover {
+    color: #fff;
+}
+
+/* ---- Back link ---- */
+.back {
+    margin-top: 30px;
+}
+
+.back a {
+    color: #8b97a6;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.back a:hover {
+    color: #fff;
+    text-decoration: underline;
 }

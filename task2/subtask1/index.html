@@ -3,60 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 2 — Sub-task 1</title>
+    <title>Task 2 — Sub-task 1 · Reload</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Task 2 — Sub-task 1</h1>
-    <!-- Add your sub-task 1 content here -->
-     <div class="papa">
-        <div class="beta1">
-            <img src="https://img.logo.dev/claudeai.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&size=128&retina=true&format=png" alt="" height="40px">
-            <div class="beta1_ka_beta">
-                RELOAD DESIGNS MAKE <br>
-                BRAND SYSYTEMS 
-                <span>
-                    <img
-                        src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTwN8c_jzBUN82gOEMH4dC7QP6nQRAu1aAf838PcOUGXVIK7sTG"
-                        alt="logo"
-                        style="
-                            display: inline-block;
-                            height: 0.65em;   /* scales with font size */
-                            width: auto;      /* keeps aspect ratio */
-                            vertical-align: middle;
-                            position: relative;
-                            top: -0.08em;     /* optical centering */
-                            object-fit: contain;
-                        "
-                    />
-                </span> 
-                THAT <br>
-                <div style="margin-left: 100px;">
-                    <span style="color: #B09898;">REDEFINE MODERN</span> <br>VISUAL CULTURE
-                </div>
-                <div style=" margin-left: 100px; font-size: xx-small;">
-                    <p style="max-width: 200px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nam, ipsa ullam ipsam optio ex veritatis illo modi voluptatum sequi blanditiis!</p>
-                </div>
-            </div>
-            <p style="text-align: end;">shape <br>the future</p>
-        </div>
-        <div class="beta2">
-            <p style="text-decoration: underline; text-transform: uppercase;">
-                our <br>
-                latest <br>
-                projects
-            </p>
-            <div>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi95NtObUbV6ZZaTh8X4HrmMLX0OEtG1eyHcGfo8f3FsnN8Kdl" alt="" height="200px" width="200px"  class="three_image">
-                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTZ99T_SMe_BXLrnE5pLpE7ON-CjPKyaHQnc5C_cs4XYZWZ1s-l" alt="" height="200px"  class="three_image">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBYbrTMEiXH29HTm_PXyZZzaCodC5GnK0tBalPLGZHKWCTx4fO" alt="" height="200px"  class="three_image">
-            </div>
-        </div>
-        <div class="beta3">
-            <p> Everything <span style="color: #B09898;">your <br>brand</span> needs to grow</p>
-        </div>
-     </div>
+    <div class="canvas">
+        <!-- top marks: positioned absolutely in the canvas corners -->
+        <span class="logo">&lowast;</span>
+        <p class="tagline">Shape<br>the future</p>
 
-    <p><a href="../">&larr; Back to Task 2</a></p>
+        <!-- hero headline -->
+        <h1 class="hero-heading">
+            <span class="line">Reload designs make</span>
+            <span class="line">Brand systems <span class="blob" aria-hidden="true"></span> that</span>
+            <span class="line indent"><span class="muted">Redefine modern</span></span>
+            <span class="line indent">Visual culture</span>
+        </h1>
+
+        <p class="hero-copy">
+            Reload builds brands that cut through noise, challenge clichés,
+            and actually sell. We combine identity, strategy, and story — all
+            in one. Since our launch, we've partnered with
+        </p>
+
+        <!-- projects: absolute side label + flex row of portrait cards -->
+        <section class="projects-row">
+            <p class="latest">Our<br>latest<br>projects</p>
+            <div class="projects">
+                <img class="project" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Portrait one">
+                <img class="project" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80" alt="Portrait two">
+                <img class="project" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&q=80" alt="Portrait three">
+            </div>
+        </section>
+
+        <!-- bottom call to action -->
+        <h2 class="cta">
+            Everything <span class="muted">your<br>brand</span> needs to grow
+        </h2>
+        <p class="cta-copy">
+            Reload offers strategic branding, visual identity, and creative direction
+            — built to cut through noise and deliver results. From storytelling to
+            execution, we design systems that grow with your business.
+        </p>
+    </div>
+
+    <p class="back"><a href="../">&larr; Back to Task 2</a></p>
 </body>
 </html>

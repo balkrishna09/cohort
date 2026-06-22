@@ -3,13 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 2 — Sub-task 2</title>
+    <title>Task 2 — Sub-task 2 · ScaleX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Task 2 — Sub-task 2</h1>
-    <!-- Add your sub-task 2 content here -->
+    <div class="page">
+        <!-- top navigation (flex space-between) -->
+        <header class="navbar">
+            <a class="brand" href="#">
+                <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M14 2 4 14h6l-1 8 11-12h-6z" fill="currentColor"/>
+                </svg>
+                <span class="brand-name">ScaleX</span>
+            </a>
 
-    <p><a href="../">&larr; Back to Task 2</a></p>
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Blogs</a>
+                <a href="#">Contact Us</a>
+            </nav>
+
+            <a class="btn-cta" href="#">Get Started</a>
+        </header>
+
+        <!-- hero heading -->
+        <h1 class="page-title">Insights &amp; Blogs</h1>
+
+        <!-- filter pills (flex, centered) -->
+        <div class="filters">
+            <button class="pill active">All</button>
+            <button class="pill">Tech</button>
+            <button class="pill">SaaS</button>
+            <button class="pill">Marketing</button>
+        </div>
+
+        <!-- blog cards (flex row); each card is a positioning context -->
+        <section class="blog-list">
+            <article class="blog-card">
+                <img class="cover" src="https://images.unsplash.com/photo-1575023782549-62ca0d244b39?w=800&q=80" alt="Martini cocktail">
+                <span class="tag">Tech</span>
+                <h2 class="card-title">The Ultimate Guide To SaaS Marketing</h2>
+                <p class="card-date">May 23, 2025</p>
+            </article>
+
+            <article class="blog-card">
+                <img class="cover" src="https://images.unsplash.com/photo-1592078615290-033ee584e267?w=800&q=80" alt="Designer chair">
+                <span class="tag">SaaS</span>
+                <h2 class="card-title">5 Key Trends In SaaS Growth For 2025</h2>
+                <p class="card-date">May 23, 2025</p>
+            </article>
+
+            <article class="blog-card">
+                <img class="cover" src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?w=800&q=80" alt="Cat looking up">
+                <span class="tag">Marketing</span>
+                <h2 class="card-title">How Data-Driven Strategies Are Important</h2>
+                <p class="card-date">May 23, 2025</p>
+            </article>
+        </section>
+    </div>
+
+    <p class="back"><a href="../">&larr; Back to Task 2</a></p>
 </body>
 </html>
