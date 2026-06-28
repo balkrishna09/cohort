@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3 — Sub-task 1 · Explore Art Work</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="canvas">
+        <!-- Header row: title left, "See All" pushed to the right with flex -->
+        <header class="bar">
+            <h1 class="title">Explore Art Work</h1>
+            <a class="see-all" href="#">See All</a>
+        </header>
+
+        <!-- Card grid: a flex row that wraps into two rows of four -->
+        <section class="grid">
+            <!-- Each card is position:relative so the heart can sit absolutely inside -->
+            <article class="card">
+                <div class="art">
+                    <img src="assets/monocular.jpg" alt="Monocular">
+                    <!-- absolute favourite badge sitting over the art -->
+                    <span class="fav">&#9825;</span>
+                </div>
+                <div class="meta">
+                    <span class="name">Monocular</span>
+                    <span class="likes"><i class="heart">&#9825;</i> 54.6k</span>
+                </div>
+                <button class="bid">Place Bid</button>
+            </article>
+
+            <article class="card">
+                <div class="art">
+                    <img src="assets/horns-mask.jpg" alt="Horns Mask">
+                    <!-- absolute favourite badge sitting over the art -->
+                    <span class="fav">&#9825;</span>
+                </div>
+                <div class="meta">
+                    <span class="name">Horns Mask</span>
+                    <span class="likes"><i class="heart">&#9825;</i> 32.4k</span>
+                </div>
+                <button class="bid">Place Bid</button>
+            </article>
+
+            <article class="card">
+                <div class="art">
+                    <img src="assets/light-moon.jpg" alt="Light Moon">
+                    <!-- absolute favourite badge sitting over the art -->
+                    <span class="fav">&#9825;</span>
+                </div>
+                <div class="meta">
+                    <span class="name">Light Moon</span>
+                    <span class="likes"><i class="heart">&#9825;</i> 88.6k</span>
+                </div>
+                <button class="bid">Place Bid</button>
+            </article>
+
+            <article class="card">
+                <div class="art">
+                    <img src="assets/skull-wire.jpg" alt="Skull Wire">
+                    <!-- absolute favourite badge sitting over the art -->
+                    <span class="fav">&#9825;</span>
+                </div>
+                <div class="meta">
+                    <span class="name">Skull Wire</span>
+                    <span class="likes"><i class="heart">&#9825;</i> 78.9k</span>
+                </div>
+                <button class="bid">Place Bid</button>
+            </article>
+
+            <article class="card">
+                <div class="art">
+                    <img src="assets/spiderman.jpg" alt="Spiderman">
+                    <!-- absolute favourite badge sitting over the art -->
+                    <span class="fav">&#9825;</span>
+                </div>
+                <div class="meta">
+                    <span class="name">Spiderman</span>
+                    <span class="likes"><i class="heart">&#9825;</i> 24.8k</span>
+                </div>
+                <!-- Active card in the design: filled bid button -->
+                <button class="bid bid--active">Place Bid</button>
+            </article>
+
+            <article class="card">
+                <div class="art">
+                    <img src="assets/deadpool.jpg" alt="DeadPool">
+                    <!-- absolute favourite badge sitting over the art -->
+                    <span class="fav">&#9825;</span>
+                </div>
+                <div class="meta">
+                    <span class="name">DeadPool</span>
+                    <span class="likes"><i class="heart">&#9825;</i> 59.7k</span>
+                </div>
+                <button class="bid">Place Bid</button>
+            </article>
+
+            <article class="card">
+                <div class="art">
+                    <img src="assets/white-eye.jpg" alt="White Eye">
+                    <!-- absolute favourite badge sitting over the art -->
+                    <span class="fav">&#9825;</span>
+                </div>
+                <div class="meta">
+                    <span class="name">White Eye</span>
+                    <span class="likes"><i class="heart">&#9825;</i> 45.7k</span>
+                </div>
+                <button class="bid">Place Bid</button>
+            </article>
+
+            <article class="card">
+                <div class="art">
+                    <img src="assets/plastic-spinal.jpg" alt="Plastic Spinal">
+                    <!-- absolute favourite badge sitting over the art -->
+                    <span class="fav">&#9825;</span>
+                </div>
+                <div class="meta">
+                    <span class="name">Plastic Spinal</span>
+                    <span class="likes"><i class="heart">&#9825;</i> 98.6k</span>
+                </div>
+                <button class="bid">Place Bid</button>
+            </article>
+        </section>
+    </main>
+
+    <p class="back"><a href="../">&larr; Back to Task 3</a></p>
+</body>
+</html>
